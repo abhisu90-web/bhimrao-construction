@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BhimRao Construction | Digital Visiting Card</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#071426;
+    color:#ffffff;
+    min-height:100vh;
+}
+
+.card{
+    width:100%;
+    max-width:480px;
+    margin:auto;
+    background:#f8fafc;
+    color:#172033;
+    min-height:100vh;
+    box-shadow:0 0 30px rgba(0,0,0,.35);
+}
+
+/* HEADER */
+.header{
+    background:linear-gradient(135deg,#061a36,#0d3d78);
+    padding:30px 20px 25px;
+    text-align:center;
+}
+
+.logo{
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    background:#ffffff;
+    margin:0 auto 12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0b3972;
+    font-size:25px;
+    font-weight:900;
+    border:4px solid #f5c542;
+}
+
+.header h1{
+    font-size:28px;
+    color:#ffffff;
+}
+
+.header h2{
+    font-size:15px;
+    color:#f5c542;
+    margin-top:5px;
+}
+
+.tagline{
+    margin-top:12px;
+    font-size:14px;
+}
+
+/* SERVICES */
+.section{
+    padding:22px 18px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:21px;
+    color:#0b3972;
+    margin-bottom:18px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.service{
+    background:white;
+    border-radius:14px;
+    padding:18px 10px;
+    text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,.10);
+    border:1px solid #e5e7eb;
+}
+
+.service-icon{
+    font-size:27px;
+    margin-bottom:8px;
+}
+
+.service strong{
+    font-size:14px;
+}
+
+/* CONTACT BUTTONS */
+.contact-buttons{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.btn{
+    text-decoration:none;
+    color:white;
+    padding:15px 10px;
+    border-radius:12px;
+    text-align:center;
+    font-weight:bold;
+    display:block;
+}
+
+.call{
+    background:#0b7a35;
+}
+
+.whatsapp{
+    background:#16a34a;
+}
+
+.location{
+    background:#d97706;
+}
+
+.website{
+    background:#174ea6;
+}
+
+/* FREE SERVICES */
+.free-box{
+    background:linear-gradient(135deg,#fff4cc,#fffdf4);
+    border:2px solid #f5c542;
+    border-radius:15px;
+    padding:18px;
+}
+
+.free-box h3{
+    text-align:center;
+    color:#8a5a00;
+    margin-bottom:12px;
+}
+
+.free-item{
+    padding:7px 0;
+    font-size:14px;
+}
+
+/* SHARE */
+.share{
+    text-align:center;
+    padding:5px 20px 25px;
+}
+
+.share-btn{
+    display:inline-block;
+    background:#111827;
+    color:white;
+    text-decoration:none;
+    padding:13px 25px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+    background:#061a36;
+    color:white;
+    text-align:center;
+    padding:20px 15px;
+    font-size:13px;
+}
+
+.phone{
+    color:#f5c542;
+    font-size:21px;
+    font-weight:bold;
+    margin:8px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- HEADER -->
+    <div class="header">
+
+        <div class="logo">BR</div>
+
+        <h1>BhimRao Construction</h1>
+
+        <h2>आपका घर, हमारी ज़िम्मेदारी</h2>
+
+        <p class="tagline">
+            हर ईंट में विश्वास, हर घर में मजबूती
+        </p>
+
+    </div>
+
+
+    <!-- SERVICES -->
+    <div class="section">
+
+        <h2 class="section-title">हमारी सेवाएँ</h2>
+
+        <div class="services">
+
+            <div class="service">
+                <div class="service-icon">🏠</div>
+                <strong>House Construction</strong>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🏗️</div>
+                <strong>RCC Work</strong>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">📐</div>
+                <strong>Map & Planning</strong>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🔨</div>
+                <strong>Renovation Work</strong>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🧱</div>
+                <strong>Quality Material</strong>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">👷</div>
+                <strong>Experienced Team</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONTACT -->
+    <div class="section">
+
+        <h2 class="section-title">सीधे हमसे जुड़ें</h2>
+
+        <div class="contact-buttons">
+
+            <a class="btn call" href="tel:7007733078">
+                📞 Call Now
+            </a>
+
+            <a class="btn whatsapp"
+               href="https://wa.me/917007733078?text=Namaste%20BhimRao%20Construction%2C%20mujhe%20construction%20ke%20baare%20mein%20jankari%20chahiye.">
+                💬 WhatsApp
+            </a>
+
+            <a class="btn location"
+               href="https://www.google.com/maps/search/?api=1&query=Lakhimpur%20Kheri%2C%20Uttar%20Pradesh"
+               target="_blank">
+                📍 Location
+            </a>
+
+            <a class="btn website"
+               href="https://abhisu90-web.github.io/bhimrao-construction/"
+               target="_blank">
+                🌐 Website
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- FREE SERVICES -->
+    <div class="section">
+
+        <div class="free-box">
+
+            <h3>🎁 FREE सुविधाएँ</h3>
+
+            <div class="free-item">
+                ✅ FREE Site Visit
+            </div>
+
+            <div class="free-item">
+                ✅ FREE Construction Consultation
+            </div>
+
+            <div class="free-item">
+                ✅ FREE Approximate Cost Estimation
+            </div>
+
+            <div class="free-item">
+                ✅ Basic Planning Guidance
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SHARE -->
+    <div class="share">
+
+        <p style="margin-bottom:12px;">
+            इस Digital Card को किसी के साथ Share करें
+        </p>
+
+        <a class="share-btn"
+           href="javascript:void(0)"
+           onclick="shareCard()">
+            📤 Share Digital Card
+        </a>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+
+        <div>BhimRao Construction</div>
+
+        <div class="phone">
+            📞 7007733078
+        </div>
+
+        <div>
+            Lakhimpur Kheri, Uttar Pradesh
+        </div>
+
+        <br>
+
+        <div>
+            Sahi Kaam • Sahi Daam • Majboot Nirman • Pura Vishwas
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function shareCard(){
+
+    if(navigator.share){
+
+        navigator.share({
+            title:"BhimRao Construction",
+            text:"BhimRao Construction का Digital Visiting Card",
+            url:window.location.href
+        });
+
+    }else{
+
+        navigator.clipboard.writeText(window.location.href);
+
+        alert("Digital Card का Link Copy हो गया है।");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
