@@ -13,116 +13,191 @@
     padding:0;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background:#071426;
-    color:#ffffff;
-    min-height:100vh;
+    color:#172033;
 }
 
 .card{
     width:100%;
     max-width:480px;
     margin:auto;
-    background:#f8fafc;
-    color:#172033;
+    background:#f7f9fc;
     min-height:100vh;
-    box-shadow:0 0 30px rgba(0,0,0,.35);
+    overflow:hidden;
+    box-shadow:0 0 35px rgba(0,0,0,.35);
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 .header{
-    background:linear-gradient(135deg,#061a36,#0d3d78);
-    padding:30px 20px 25px;
+    background:
+    radial-gradient(circle at top right,rgba(245,197,66,.18),transparent 35%),
+    linear-gradient(145deg,#061a36,#0d3d78);
+
+    color:white;
     text-align:center;
+    padding:28px 18px 30px;
+}
+
+.badge{
+    display:inline-block;
+    background:#f5c542;
+    color:#081a35;
+    padding:7px 16px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1px;
+    margin-bottom:18px;
 }
 
 .logo{
-    width:85px;
-    height:85px;
+    width:92px;
+    height:92px;
+    margin:auto;
     border-radius:50%;
-    background:#ffffff;
-    margin:0 auto 12px;
+    background:white;
+    border:4px solid #f5c542;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     color:#0b3972;
-    font-size:25px;
+    font-size:30px;
     font-weight:900;
-    border:4px solid #f5c542;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
 .header h1{
     font-size:28px;
-    color:#ffffff;
+    margin-top:15px;
+    line-height:1.15;
 }
 
 .header h2{
-    font-size:15px;
-    color:#f5c542;
-    margin-top:5px;
+    color:#ffd95a;
+    font-size:16px;
+    margin-top:9px;
 }
 
 .tagline{
-    margin-top:12px;
+    margin-top:13px;
+    color:#ffffff;
     font-size:14px;
+    font-weight:600;
 }
 
-/* SERVICES */
+/* ================= LOCATION ================= */
+
+.location-top{
+    margin:18px auto 0;
+    display:inline-block;
+    padding:9px 16px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:25px;
+    font-size:13px;
+}
+
+/* ================= SECTION ================= */
+
 .section{
-    padding:22px 18px;
+    padding:25px 18px;
 }
 
 .section-title{
     text-align:center;
-    font-size:21px;
     color:#0b3972;
-    margin-bottom:18px;
+    font-size:23px;
+    margin-bottom:20px;
+    font-weight:800;
 }
+
+/* ================= SERVICES ================= */
 
 .services{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:12px;
+    gap:13px;
 }
 
 .service{
-    background:white;
-    border-radius:14px;
+    background:#ffffff;
+    min-height:125px;
+
+    border-radius:17px;
     padding:18px 10px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
     text-align:center;
-    box-shadow:0 3px 12px rgba(0,0,0,.10);
-    border:1px solid #e5e7eb;
+
+    border:1px solid #e4e8ef;
+    box-shadow:0 5px 16px rgba(15,40,70,.09);
 }
 
 .service-icon{
-    font-size:27px;
-    margin-bottom:8px;
+    font-size:32px;
+    margin-bottom:10px;
 }
 
 .service strong{
     font-size:14px;
+    line-height:1.3;
+    color:#172033;
 }
 
-/* CONTACT BUTTONS */
-.contact-buttons{
+/* ================= CONNECT ================= */
+
+.connect{
+    background:#eef4fb;
+    padding-top:25px;
+    padding-bottom:25px;
+}
+
+.buttons{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:12px;
 }
 
 .btn{
-    text-decoration:none;
+    min-height:58px;
+
+    border-radius:14px;
+
     color:white;
-    padding:15px 10px;
-    border-radius:12px;
-    text-align:center;
-    font-weight:bold;
-    display:block;
+    text-decoration:none;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:15px;
+    font-weight:800;
+
+    box-shadow:0 5px 13px rgba(0,0,0,.12);
+
+    transition:.2s;
+}
+
+.btn:active{
+    transform:scale(.97);
 }
 
 .call{
-    background:#0b7a35;
+    background:#087a35;
 }
 
 .whatsapp{
@@ -130,225 +205,379 @@ body{
 }
 
 .location{
-    background:#d97706;
+    background:#df8500;
 }
 
 .website{
-    background:#174ea6;
+    background:#2058a8;
 }
 
-/* FREE SERVICES */
+.save{
+    grid-column:1 / -1;
+    background:#111827;
+}
+
+/* ================= FREE ================= */
+
 .free-box{
-    background:linear-gradient(135deg,#fff4cc,#fffdf4);
+    background:
+    linear-gradient(135deg,#fff8d9,#fffdf5);
+
     border:2px solid #f5c542;
-    border-radius:15px;
-    padding:18px;
+    border-radius:18px;
+    padding:21px 18px;
+
+    box-shadow:0 5px 16px rgba(100,80,10,.08);
 }
 
-.free-box h3{
+.free-title{
     text-align:center;
-    color:#8a5a00;
-    margin-bottom:12px;
+    color:#855900;
+    font-size:20px;
+    font-weight:800;
+    margin-bottom:14px;
 }
 
 .free-item{
-    padding:7px 0;
+    display:flex;
+    gap:9px;
+    padding:8px 0;
     font-size:14px;
+    font-weight:600;
 }
 
-/* SHARE */
+/* ================= SHARE ================= */
+
 .share{
     text-align:center;
-    padding:5px 20px 25px;
+    padding:5px 20px 28px;
+}
+
+.share-text{
+    font-size:14px;
+    margin-bottom:13px;
+    color:#343c4d;
 }
 
 .share-btn{
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
     background:#111827;
     color:white;
-    text-decoration:none;
-    padding:13px 25px;
+
+    padding:14px 24px;
     border-radius:30px;
-    font-weight:bold;
+
+    font-weight:800;
+    text-decoration:none;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.18);
 }
 
-/* FOOTER */
+/* ================= QR INFO ================= */
+
+.qr-info{
+    margin:0 18px 25px;
+    padding:18px;
+
+    background:#ffffff;
+    border-radius:17px;
+
+    border:1px solid #e2e7ee;
+
+    text-align:center;
+}
+
+.qr-info h3{
+    color:#0b3972;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.qr-info p{
+    color:#555f70;
+    font-size:13px;
+    line-height:1.5;
+}
+
+/* ================= FOOTER ================= */
+
 .footer{
     background:#061a36;
     color:white;
     text-align:center;
-    padding:20px 15px;
-    font-size:13px;
+    padding:25px 15px;
 }
 
-.phone{
-    color:#f5c542;
-    font-size:21px;
-    font-weight:bold;
-    margin:8px 0;
+.footer-brand{
+    font-size:20px;
+    font-weight:800;
+}
+
+.footer-phone{
+    color:#ffd34f;
+    font-size:23px;
+    font-weight:900;
+    margin:10px 0;
+}
+
+.footer-location{
+    font-size:14px;
+}
+
+.footer-line{
+    margin-top:17px;
+    padding-top:15px;
+    border-top:1px solid rgba(255,255,255,.18);
+    font-size:12px;
+    color:#e7edf7;
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:360px){
+
+    .header h1{
+        font-size:24px;
+    }
+
+    .service{
+        min-height:115px;
+    }
+
+    .btn{
+        font-size:13px;
+    }
 }
 </style>
 </head>
+
 
 <body>
 
 <div class="card">
 
-    <!-- HEADER -->
-    <div class="header">
+<!-- ================= HEADER ================= -->
 
-        <div class="logo">BR</div>
+<header class="header">
 
-        <h1>BhimRao Construction</h1>
-
-        <h2>आपका घर, हमारी ज़िम्मेदारी</h2>
-
-        <p class="tagline">
-            हर ईंट में विश्वास, हर घर में मजबूती
-        </p>
-
+    <div class="badge">
+        DIGITAL VISITING CARD
     </div>
 
+    <div class="logo">
+        BR
+    </div>
 
-    <!-- SERVICES -->
-    <div class="section">
+    <h1>
+        BhimRao Construction
+    </h1>
 
-        <h2 class="section-title">हमारी सेवाएँ</h2>
+    <h2>
+        आपका घर, हमारी ज़िम्मेदारी
+    </h2>
 
-        <div class="services">
+    <p class="tagline">
+        हर ईंट में विश्वास, हर घर में मजबूती
+    </p>
 
-            <div class="service">
-                <div class="service-icon">🏠</div>
-                <strong>House Construction</strong>
-            </div>
+    <div class="location-top">
+        📍 Lakhimpur Kheri, Uttar Pradesh
+    </div>
 
-            <div class="service">
-                <div class="service-icon">🏗️</div>
-                <strong>RCC Work</strong>
-            </div>
+</header>
 
-            <div class="service">
-                <div class="service-icon">📐</div>
-                <strong>Map & Planning</strong>
-            </div>
 
-            <div class="service">
-                <div class="service-icon">🔨</div>
-                <strong>Renovation Work</strong>
-            </div>
+<!-- ================= SERVICES ================= -->
 
-            <div class="service">
-                <div class="service-icon">🧱</div>
-                <strong>Quality Material</strong>
-            </div>
+<section class="section">
 
-            <div class="service">
-                <div class="service-icon">👷</div>
-                <strong>Experienced Team</strong>
-            </div>
+    <h2 class="section-title">
+        हमारी सेवाएँ
+    </h2>
 
+    <div class="services">
+
+        <div class="service">
+            <div class="service-icon">🏠</div>
+            <strong>House Construction</strong>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">🏗️</div>
+            <strong>RCC Work</strong>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">📐</div>
+            <strong>Map & Planning</strong>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">🔨</div>
+            <strong>Renovation Work</strong>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">🧱</div>
+            <strong>Quality Material</strong>
+        </div>
+
+        <div class="service">
+            <div class="service-icon">👷</div>
+            <strong>Experienced Team</strong>
         </div>
 
     </div>
 
-
-    <!-- CONTACT -->
-    <div class="section">
-
-        <h2 class="section-title">सीधे हमसे जुड़ें</h2>
-
-        <div class="contact-buttons">
-
-            <a class="btn call" href="tel:7007733078">
-                📞 Call Now
-            </a>
-
-            <a class="btn whatsapp"
-               href="https://wa.me/917007733078?text=Namaste%20BhimRao%20Construction%2C%20mujhe%20construction%20ke%20baare%20mein%20jankari%20chahiye.">
-                💬 WhatsApp
-            </a>
-
-            <a class="btn location"
-               href="https://www.google.com/maps/search/?api=1&query=Lakhimpur%20Kheri%2C%20Uttar%20Pradesh"
-               target="_blank">
-                📍 Location
-            </a>
-
-            <a class="btn website"
-               href="https://abhisu90-web.github.io/bhimrao-construction/"
-               target="_blank">
-                🌐 Website
-            </a>
-
-        </div>
-
-    </div>
+</section>
 
 
-    <!-- FREE SERVICES -->
-    <div class="section">
+<!-- ================= CONNECT ================= -->
 
-        <div class="free-box">
+<section class="connect">
 
-            <h3>🎁 FREE सुविधाएँ</h3>
+    <h2 class="section-title">
+        सीधे हमसे जुड़ें
+    </h2>
 
-            <div class="free-item">
-                ✅ FREE Site Visit
-            </div>
+    <div class="buttons">
 
-            <div class="free-item">
-                ✅ FREE Construction Consultation
-            </div>
-
-            <div class="free-item">
-                ✅ FREE Approximate Cost Estimation
-            </div>
-
-            <div class="free-item">
-                ✅ Basic Planning Guidance
-            </div>
-
-        </div>
-
-    </div>
+        <a
+        class="btn call"
+        href="tel:7007733078">
+        📞 Call Now
+        </a>
 
 
-    <!-- SHARE -->
-    <div class="share">
+        <a
+        class="btn whatsapp"
+        href="https://wa.me/917007733078?text=Namaste%20BhimRao%20Construction%2C%20mujhe%20construction%20ke%20baare%20mein%20jankari%20chahiye.">
+        💬 WhatsApp
+        </a>
 
-        <p style="margin-bottom:12px;">
-            इस Digital Card को किसी के साथ Share करें
-        </p>
 
-        <a class="share-btn"
-           href="javascript:void(0)"
-           onclick="shareCard()">
-            📤 Share Digital Card
+        <a
+        class="btn location"
+        href="https://www.google.com/maps/search/?api=1&query=Lakhimpur%20Kheri%2C%20Uttar%20Pradesh"
+        target="_blank">
+        📍 Location
+        </a>
+
+
+        <a
+        class="btn website"
+        href="https://abhisu90-web.github.io/bhimrao-construction/"
+        target="_blank">
+        🌐 Website
+        </a>
+
+
+        <a
+        class="btn save"
+        href="tel:7007733078">
+        👤 Save Contact
         </a>
 
     </div>
 
+</section>
 
-    <!-- FOOTER -->
-    <div class="footer">
 
-        <div>BhimRao Construction</div>
+<!-- ================= FREE SERVICES ================= -->
 
-        <div class="phone">
-            📞 7007733078
+<section class="section">
+
+    <div class="free-box">
+
+        <div class="free-title">
+            🎁 FREE सुविधाएँ
         </div>
 
-        <div>
-            Lakhimpur Kheri, Uttar Pradesh
+        <div class="free-item">
+            <span>✅</span>
+            <span>FREE Site Visit</span>
         </div>
 
-        <br>
+        <div class="free-item">
+            <span>✅</span>
+            <span>FREE Construction Consultation</span>
+        </div>
 
-        <div>
-            Sahi Kaam • Sahi Daam • Majboot Nirman • Pura Vishwas
+        <div class="free-item">
+            <span>✅</span>
+            <span>FREE Approximate Cost Estimation</span>
+        </div>
+
+        <div class="free-item">
+            <span>✅</span>
+            <span>Basic Planning Guidance</span>
         </div>
 
     </div>
+
+</section>
+
+
+<!-- ================= SHARE ================= -->
+
+<section class="share">
+
+    <p class="share-text">
+        इस Digital Card को किसी के साथ Share करें
+    </p>
+
+    <a
+    class="share-btn"
+    href="javascript:void(0)"
+    onclick="shareCard()">
+    📤 Share Digital Card
+    </a>
+
+</section>
+
+
+<!-- ================= QR EXPLANATION ================= -->
+
+<div class="qr-info">
+
+    <h3>
+        📱 एक Scan में पूरी जानकारी
+    </h3>
+
+    <p>
+        इस Digital Card का QR Code scan करके
+        कोई भी व्यक्ति BhimRao Construction की
+        पूरी जानकारी, Services और Contact Options
+        एक ही जगह देख सकता है।
+    </p>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-brand">
+        BhimRao Construction
+    </div>
+
+    <div class="footer-phone">
+        📞 7007733078
+    </div>
+
+    <div class="footer-location">
+        Lakhimpur Kheri, Uttar Pradesh
+    </div>
+
+    <div class="footer-line">
+        Sahi Kaam • Sahi Daam • Majboot Nirman • Pura Vishwas
+    </div>
+
+</footer>
 
 </div>
 
