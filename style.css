@@ -21,14 +21,14 @@ margin:auto;
 }
 
 
-/* TOP BAR */
+/* ================= TOP BAR ================= */
 
 .topbar{
-background:#07111f;
-color:#aab6c5;
+background:#050c17;
+color:#aeb9c7;
 text-align:center;
 font-size:12px;
-padding:9px;
+padding:9px 12px;
 letter-spacing:.3px;
 }
 
@@ -38,91 +38,101 @@ margin:0 8px;
 }
 
 
-/* HERO */
+/* ================= MAIN HERO ================= */
 
-.hero{
+/* IMPORTANT FIX:
+   Header itself now gets the dark premium background */
+header#home{
 min-height:730px;
 background:
 radial-gradient(
-circle at 80% 40%,
-rgba(213,169,58,.16),
-transparent 30%
+circle at 82% 42%,
+rgba(213,169,58,.17),
+transparent 29%
 ),
 linear-gradient(
 135deg,
-#07111f 0%,
-#0b1b30 60%,
-#111c2d 100%
+#050c17 0%,
+#081729 55%,
+#0d1d31 100%
 );
-color:white;
+color:#fff;
 position:relative;
 overflow:hidden;
 }
 
-.hero:after{
+header#home:after{
 content:"";
 position:absolute;
-width:520px;
-height:520px;
-border:1px solid rgba(213,169,58,.16);
+width:540px;
+height:540px;
+border:1px solid rgba(213,169,58,.13);
 border-radius:50%;
-right:-180px;
-top:130px;
+right:-210px;
+top:160px;
+pointer-events:none;
 }
 
 
-/* NAVIGATION */
+/* ================= NAV ================= */
 
 .nav{
 height:82px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-border-bottom:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,.09);
 position:relative;
-z-index:5;
+z-index:10;
 }
 
 .brand{
 display:flex;
 align-items:center;
-gap:10px;
-color:white;
+gap:11px;
+color:#fff;
 text-decoration:none;
 }
 
 .brand-mark{
 display:grid;
 place-items:center;
-width:43px;
-height:43px;
+width:44px;
+height:44px;
 border:1px solid #d5a93a;
 color:#d5a93a;
 font-family:Montserrat,Arial,sans-serif;
 font-weight:800;
-border-radius:9px;
+font-size:18px;
+border-radius:10px;
+background:rgba(213,169,58,.05);
 }
+
+/* PREMIUM GOLD BRAND TEXT */
 
 .brand strong{
 display:block;
 font-family:Montserrat,Arial,sans-serif;
-font-size:18px;
+font-size:19px;
+font-weight:800;
+color:#d5a93a;
 }
 
 .brand small{
 display:block;
-font-size:9px;
-letter-spacing:2px;
-color:#aab6c5;
+font-size:8px;
+letter-spacing:2.5px;
+color:#aeb9c7;
+margin-top:1px;
 }
 
 .nav-links{
 display:flex;
-gap:25px;
+gap:26px;
 }
 
 .nav-links a{
-color:#d8e0e8;
+color:#d9e0e8;
 text-decoration:none;
 font-size:13px;
 transition:.2s;
@@ -135,7 +145,7 @@ color:#d5a93a;
 .nav-cta{
 background:#d5a93a;
 color:#07111f;
-padding:11px 18px;
+padding:11px 19px;
 border-radius:7px;
 font-size:12px;
 font-weight:800;
@@ -146,13 +156,13 @@ text-decoration:none;
 display:none;
 background:none;
 border:0;
-color:white;
-font-size:28px;
+color:#fff;
+font-size:29px;
 cursor:pointer;
 }
 
 
-/* HERO CONTENT */
+/* ================= HERO CONTENT ================= */
 
 .hero-inner{
 min-height:648px;
@@ -176,6 +186,7 @@ font-family:Montserrat,Arial,sans-serif;
 font-size:clamp(42px,6vw,76px);
 line-height:1.04;
 margin:18px 0;
+color:#fff;
 }
 
 .hero-copy h1 span{
@@ -214,9 +225,18 @@ background:#d5a93a;
 color:#07111f;
 }
 
-.outline{
-border:1px solid #718094;
-color:white;
+
+/* CALL BUTTON FIX */
+
+.hero-actions .outline{
+background:#fff;
+border:1px solid #fff;
+color:#07111f;
+}
+
+.hero-actions .outline:hover{
+background:#f3f3f3;
+color:#07111f;
 }
 
 .trust-row{
@@ -229,12 +249,12 @@ font-size:12px;
 }
 
 
-/* HERO CARD */
+/* ================= HERO CARD ================= */
 
 .hero-card{
 background:rgba(255,255,255,.07);
 backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.13);
 padding:30px;
 border-radius:16px;
 box-shadow:0 25px 70px rgba(0,0,0,.25);
@@ -258,6 +278,7 @@ color:#d5a93a;
 font-family:Montserrat,Arial,sans-serif;
 font-size:25px;
 margin:30px 0 10px;
+color:#fff;
 }
 
 .hero-card p{
@@ -274,10 +295,10 @@ font-weight:700;
 }
 
 
-/* STATS */
+/* ================= STATS ================= */
 
 .stats{
-background:white;
+background:#fff;
 border-bottom:1px solid #e5e9ee;
 }
 
@@ -309,7 +330,7 @@ color:#617082;
 }
 
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 .section{
 padding:95px 0;
@@ -337,7 +358,7 @@ color:#d5a93a;
 }
 
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 
 .two-col{
 display:grid;
@@ -352,11 +373,15 @@ margin-bottom:15px;
 }
 
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 
 .services-section{
 background:#07111f;
-color:white;
+color:#fff;
+}
+
+.services-section h2{
+color:#fff;
 }
 
 .section-lead{
@@ -377,11 +402,13 @@ gap:16px;
 
 .service-card{
 background:#101f32;
-border:1px solid #1d3148;
+border:1px solid #263b54;
 padding:25px;
 border-radius:12px;
 min-height:235px;
 transition:.25s;
+position:relative;
+overflow:hidden;
 }
 
 .service-card:hover{
@@ -403,6 +430,7 @@ margin-bottom:20px;
 .service-card h3{
 font-family:Montserrat,Arial,sans-serif;
 font-size:17px;
+color:#fff;
 }
 
 .service-card p{
@@ -419,7 +447,59 @@ font-weight:700;
 }
 
 
-/* PROJECTS */
+/* ================= 2D/3D PLAN CARD ================= */
+
+/* Architectural drawing style visual */
+
+.service-card:nth-child(2){
+background:
+linear-gradient(
+rgba(16,31,50,.92),
+rgba(16,31,50,.97)
+),
+url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80");
+
+background-size:cover;
+background-position:center;
+}
+
+.service-card:nth-child(2):before{
+content:"";
+position:absolute;
+right:-35px;
+top:20px;
+width:150px;
+height:110px;
+border:1px solid rgba(213,169,58,.35);
+transform:rotate(-8deg);
+opacity:.45;
+}
+
+.service-card:nth-child(2):after{
+content:"2D  •  3D";
+position:absolute;
+right:20px;
+top:85px;
+font-family:Montserrat,Arial,sans-serif;
+font-size:11px;
+letter-spacing:2px;
+color:rgba(213,169,58,.45);
+}
+
+.service-card:nth-child(2) .icon{
+position:relative;
+z-index:2;
+}
+
+.service-card:nth-child(2) h3,
+.service-card:nth-child(2) p,
+.service-card:nth-child(2) a{
+position:relative;
+z-index:2;
+}
+
+
+/* ================= PROJECTS ================= */
 
 .section-head{
 display:flex;
@@ -444,7 +524,7 @@ margin-top:35px;
 }
 
 .project-card{
-background:white;
+background:#fff;
 border-radius:14px;
 overflow:hidden;
 box-shadow:0 12px 35px rgba(15,35,55,.08);
@@ -479,11 +559,15 @@ margin-top:5px;
 }
 
 
-/* PROCESS */
+/* ================= PROCESS ================= */
 
 .process-section{
 background:#07111f;
-color:white;
+color:#fff;
+}
+
+.process-section h2{
+color:#fff;
 }
 
 .process-grid{
@@ -514,7 +598,7 @@ color:#aab6c4;
 }
 
 
-/* ESTIMATE */
+/* ================= ESTIMATE ================= */
 
 .estimate-section{
 background:#eef2f6;
@@ -525,7 +609,7 @@ display:grid;
 grid-template-columns:1fr .75fr;
 gap:60px;
 align-items:center;
-background:white;
+background:#fff;
 border:1px solid #e0e5eb;
 border-radius:18px;
 padding:45px;
@@ -541,7 +625,7 @@ margin-top:15px;
 background:#07111f;
 padding:25px;
 border-radius:14px;
-color:white;
+color:#fff;
 }
 
 .calculator label{
@@ -557,7 +641,7 @@ padding:13px;
 border-radius:7px;
 border:1px solid #304258;
 background:#0f1d2e;
-color:white;
+color:#fff;
 outline:none;
 font-size:14px;
 }
@@ -591,7 +675,7 @@ margin-top:5px;
 }
 
 
-/* CTA */
+/* ================= CTA ================= */
 
 .cta-section{
 background:#d5a93a;
@@ -615,16 +699,16 @@ max-width:700px;
 }
 
 .cta-section h2 span{
-color:white;
+color:#fff;
 }
 
 .cta-section .btn{
 background:#07111f;
-color:white;
+color:#fff;
 }
 
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 
 .contact-section{
 background:#f5f7fa;
@@ -638,7 +722,7 @@ margin-top:35px;
 }
 
 .contact-card{
-background:white;
+background:#fff;
 border:1px solid #e0e5eb;
 border-radius:13px;
 padding:25px;
@@ -648,6 +732,7 @@ transition:.2s;
 
 .contact-card:hover{
 transform:translateY(-4px);
+border-color:#d5a93a;
 }
 
 .contact-icon{
@@ -676,7 +761,7 @@ font-weight:700;
 }
 
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
 background:#050b13;
@@ -708,6 +793,7 @@ height:36px;
 
 .footer-brand strong{
 font-size:15px;
+color:#d5a93a;
 }
 
 .footer-brand small{
@@ -715,7 +801,7 @@ font-size:7px;
 }
 
 
-/* TABLET */
+/* ================= TABLET ================= */
 
 @media(max-width:900px){
 
@@ -766,12 +852,13 @@ align-items:flex-start;
 }
 
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:650px){
 
 .topbar{
 font-size:10px;
+line-height:1.5;
 }
 
 .nav{
@@ -823,6 +910,10 @@ font-size:15px;
 flex-direction:column;
 }
 
+.hero-actions .btn{
+width:100%;
+}
+
 .trust-row{
 gap:10px;
 flex-direction:column;
@@ -862,6 +953,35 @@ align-items:flex-start;
 .footer-inner{
 flex-direction:column;
 align-items:flex-start;
+}
+
+}
+
+
+/* ================= EXTRA MOBILE POLISH ================= */
+
+@media(max-width:420px){
+
+.brand strong{
+font-size:17px;
+}
+
+.brand-mark{
+width:41px;
+height:41px;
+}
+
+.hero-copy h1{
+font-size:38px;
+}
+
+.eyebrow{
+font-size:9px;
+line-height:1.8;
+}
+
+.service-card{
+padding:23px;
 }
 
 }
